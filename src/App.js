@@ -1,5 +1,5 @@
 import './App.css'
-import * as data from './film-data.json'
+// import * as data from '../film-data.json'
 
 function App() {
   return (
