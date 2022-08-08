@@ -7,6 +7,8 @@ export default function Slider() {
 
     const [count, setCount] = useState(0)
 
+    // const [buttonStyle, setButtonStyle] = useState('normal-button')
+
 
     const sliderLength = dataSlider.length - 1;
 
@@ -14,6 +16,10 @@ export default function Slider() {
         if (count < sliderLength) {
             setCount(count + 1)
         }
+
+        // if (count >= 0) {
+        //     setButtonStyle('active-button')
+        // }
 
         // if (count === sliderLength) {
         //     setCount(0)
@@ -37,28 +43,60 @@ export default function Slider() {
 
 
 
+
+
     return (
         <>
+
+            <div className='title-section'>
+                <h1>{dataSlider[count].title}</h1>
+            </div>
+
+
+
+
+
+
+            <div className='wrapper'>
+
+                <h1>{dataSlider[count].original_title}</h1>
+
+                <p>{dataSlider[count].release_date}</p>
+
+                <p>{dataSlider[count].description}</p>
+
+                <img src={dataSlider[count].image} alt={dataSlider[count].title} width="300"></img>
+
+            </div>
+
+
+
+            <div className='button-section'>
+
+                <button className='normal-button' onClick={() => handleReset()}>
+                    Start Over
+                </button>
+
+                <button className='normal-button' onClick={() => handleBack()}>
+                    Back
+                </button>
+
+                <button className='normal-button' onClick={() => handleNext()}>
+                    Next
+                </button>
+
+            </div>
+
+            <div>
+                <p className='count-value'>Count: {count}</p>
+            </div>
+
+
             {/* <p>Total Length: {sliderLength}</p> */}
 
-            <p>Count: {count}</p>
 
-            <button onClick={() => handleNext()}>
-                Next
-            </button>
-
-            <br />
-
-            <button onClick={() => handleBack()}>
-                Back
-            </button>
-
-            <br />
-
-            <button onClick={() => handleReset()}>
-                Start Over
-            </button>
-
+            {/* 
+            
             <p>{dataSlider[count].title}</p>
 
             <p>{dataSlider[count].original_title}</p>
@@ -67,9 +105,9 @@ export default function Slider() {
 
             <p>{dataSlider[count].description}</p>
 
-            <img src={dataSlider[count].image} alt={dataSlider[count].title} width="300"></img>
-
-
+            <img src={dataSlider[count].image} alt={dataSlider[count].title} width="300"></img> 
+            
+            */}
 
 
             {/* {dataSlider.map((itemz, index) => (

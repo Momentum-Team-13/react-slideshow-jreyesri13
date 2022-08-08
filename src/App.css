@@ -1,22 +1,61 @@
 button {
-    width: 5%;
+    width: 100px;
     font-size: 16px;
-    color: #ffffff;
-    background-color: #252d4a;
-    border-radius: 15px;
-    display: flex;
+    border-radius: 5px;
     padding: 5px;
-    /* justify-content: flex-start; */
-    justify-content: center;
-    align-items: center;
-    border: 5px solid #234668;
+    margin: 5px;
     cursor: pointer;
+    /* color: #ffffff; */
+    /* background-color: #252d4a; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* border: 5px solid #234668; */
 }
 
-button:hover {
+.button-section {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.normal-button {
+    color: #ffffff;
+    background-color: #099AC1;
+}
+
+.active-button {
+    color: #ffffff;
+    background-color: #252d4a;
+}
+
+/* button:hover {
     background-color: #555e7d;
 }
 
 button:focus {
     outline: none;
+} */
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    
+}
+
+
+
+
+.count-value {
+    display: flex;
+    justify-content: center;
 }
